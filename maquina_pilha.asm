@@ -1057,18 +1057,18 @@ memory_operations:
         mov cx, [rsi+4]
         
         push rsi
-        mov rsi, rbx        ; Endereço fonte
-        mov rdi, rcx        ; Endereço destino
-        mov rcx, rax        ; Quantidade de bytes
+        mov rsi, rbx        
+        mov rdi, rcx        
+        mov rcx, rax       
         rep movsb
         pop rsi
         ret
 
     ; Operações de preenchimento de memória
     fill_mem:
-        mov al, [rsi+1]     ; Valor para preencher
-        mov bx, [rsi+2]     ; Endereço inicial
-        mov cx, [rsi+4]     ; Quantidade
+        mov al, [rsi+1]     
+        mov bx, [rsi+2]     
+        mov cx, [rsi+4]     
         
         push rdi
         mov rdi, rbx
@@ -1078,9 +1078,9 @@ memory_operations:
 
     ; Busca em memória
     search_mem:
-        mov al, [rsi+1]     ; Valor a procurar
-        mov bx, [rsi+2]     ; Endereço inicial
-        mov cx, [rsi+4]     ; Tamanho da busca
+        mov al, [rsi+1]     
+        mov bx, [rsi+2]     
+        mov cx, [rsi+4]     
         
         push rdi
         mov rdi, rbx
